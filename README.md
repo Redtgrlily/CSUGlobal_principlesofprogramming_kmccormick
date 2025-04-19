@@ -13,4 +13,7 @@ Module 2 Discussion:
 Provide your interpretation of short-circuiting with respect to compound conditional expressions in Python. Include a brief pseudocode example in your post. In response to your peers, provide examples and constructive feedback on the structures and circumstances posted by your peers.
 
 Result: 
-Screenshots attached.
+Screenshots attached: 
+Screenshot 2025-04-19 at 11.57.22 AM.png
+Screenshot 2025-04-19 at 11.59.04 AM.png
+Screenshot 2025-04-19 at 11.59.53 AM.png
