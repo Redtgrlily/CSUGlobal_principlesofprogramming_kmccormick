@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Course Lookup</title>
+    </head>
+    <body>
+        <h1>Course Info Lookup</h1>
+        <form method="post" action="{% url 'course_detail' %}">
+            {% csrf_token %}
+            <label for="course_code">Enter Course Code:</label>
+            <input type="text" name="course_code" id="course_code" required>
+            <button type="submit">Search</button>
+        </form>
+
+        {% if error %}
+            <p style="color:red">{{ error }}</p>
+        {% endif %}
+    </body>
+</html>
