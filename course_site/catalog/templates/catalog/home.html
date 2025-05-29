@@ -15,5 +15,44 @@
         {% if error %}
             <p style="color:red">{{ error }}</p>
         {% endif %}
+
+        {% extends 'base.html' %}
+        {% block title %}Available Courses{% endblock %}
+
+        {% block content %}
+        <h1 class="mb-4">Available Courses</h1>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Code</th>
+                        <th>Title</th>
+                        <th>Instructor</th>
+                        <th>Room</th>
+                        <th>Time</th>
+                        <th>Book</th>
+                        <th>Prerequisite</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in courses %}
+                    <tr>
+                        <td>{{ course.code }}</td>
+                        <td>{{ course.name }}</td>
+                        <td>{{ course.instructor }}</td>
+                        <td>{{ course.room }}</td>
+                        <td>{{ course.time }}</td>
+                        <td>
+                            <strong>{{ course.book_title }}</strong><br>
+                            <small>ISBN: {{ course.book_isbn }}</small>
+                        </td>
+                        <td>{{ course.prerequisite|default:"None" }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endblock %}
     </body>
 </html>
